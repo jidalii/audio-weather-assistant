@@ -1,0 +1,17 @@
+sentence,time,location,question_type,temp_comp_flag
+tell me about the weather in Boston now,now,Boston,3,-1
+tell me about the weather in Paris April 1st,April 1st,Paris,3,-1
+tell me about the weather in Chicago N/A,N/A,Chicago,3,-1
+tell me about the weather  now,now,N/A,3,-1
+Can you give me the weather conditions in Chicago next week,next week,Chicago,3,-1
+tell me about the weather in Los Angeles April 1st,April 1st,Los Angeles,3,-1
+What's the weather like  next hour,next hour,N/A,3,-1
+How's the climate in Boston now,now,Boston,3,-1
+Can you give me the weather conditions in Miami N/A,N/A,Miami,3,-1
+how is the weather in Boston April 1st,April 1st,Boston,3,-1
+tell me about the weather in Chicago tomorrow,tomorrow,Chicago,3,-1
+Can you give me the weather conditions in Miami next week,next week,Miami,3,-1
+Can you give me the weather conditions in New York now,now,New York,3,-1
+Can you give me the weather conditions in Los Angeles April 1st,April 1st,Los Angeles,3,-1
+Can you give me the weather conditions in Miami now,now,Miami,3,-1
+how is the weather in Chicago next week,next week,Chicago,3,-1
