@@ -34,8 +34,20 @@ times = ["N/A", "now", "tomorrow", "next hour", "next week", "April 1st"]
 
 
 def append_sentences(
-    sentences: list, sentence, location, time, question_type, temp_comp_flag
+    sentences: list, sentence_set: list, location, time, question_type, temp_comp_flag
 ):
+    if location == "N/A" and time == "N/A":
+        sentence = random.choice(sentence_set)
+        sentence = sentence.format("", "")
+    elif location == "N/A":
+        sentence = random.choice(sentence_set)
+        sentence = sentence.format("", time)
+    elif location == "N/A":
+        sentence = random.choice(sentence_set)
+        sentence = sentence.format("in "+location, "")
+    else:
+        sentence = random.choice(sentence_set)
+        sentence = sentence.format("in "+location, time)
     sentences.append(
         {
             "sentence": sentence,
@@ -69,23 +81,8 @@ def generate_weather_data_sample(sentences: list):
     for i in range(SAMPLE_PER_QUESTION_TYPE):
         location = random.choice(locations)
         time = random.choice(times)
-        if location == "N/A" and time == "N/A":
-            sentence = random.choice(general_weather_sentences)
-            sentence = sentence.format("", "")
-            append_sentences(sentences, sentence, location, time, WEATHER_DATA, NA)
-        elif location == "N/A":
-            sentence = random.choice(general_weather_sentences)
-            sentence = sentence.format("", time)
-            append_sentences(sentences, sentence, location, time, WEATHER_DATA, NA)
-        elif location == "N/A":
-            sentence = random.choice(general_weather_sentences)
-            sentence = sentence.format("in "+location, "")
-            append_sentences(sentences, sentence, location, time, WEATHER_DATA, NA)
-        else:
-            sentence = random.choice(general_weather_sentences)
-            sentence = sentence.format("in "+location, time)
-            append_sentences(sentences, sentence, location, time, WEATHER_DATA, NA)
-
+        append_sentences(sentences, general_weather_sentences, location, time, WEATHER_DATA, NA)
+        
 
 def main():
     sentence_ls = []
