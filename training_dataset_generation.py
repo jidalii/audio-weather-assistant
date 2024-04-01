@@ -7,6 +7,7 @@ RAIN = 0
 SNOW = 1
 TEMP_COMP = 2
 WEATHER_DATA = 3
+WAKE_UP = 4
 
 # TempComp
 NA = -1
@@ -60,9 +61,21 @@ def append_sentences(
 
 
 # generate UNKWON sentence type
+random_sentences = [
+    "how are you",
+    "what time is it",
+    "do you prefer mac or linux",
+    "it is cold outside",
+    "it is raining"
+]
 
 # generate RAIN sentence type
-
+general_rain_sentences = [
+    "is it gonna rain {} {}",
+    "will it rain {} {}",
+    "is rain expected {} {}",
+    "Might it rain {} {}"
+]
 # generate SNOW sentence type
 
 # generate TEMP_COMP sentence type
@@ -82,7 +95,12 @@ def generate_weather_data_sample(sentences: list):
         location = random.choice(locations)
         time = random.choice(times)
         append_sentences(sentences, general_weather_sentences, location, time, WEATHER_DATA, NA)
-        
+
+# generate WAKE_UP type     
+wake_up_sentences = [
+    "Hey Simpson",
+    "Hi Simpson"
+]
 
 def main():
     sentence_ls = []
