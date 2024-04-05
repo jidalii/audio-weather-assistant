@@ -14,8 +14,8 @@ WAKE_UP = 4
 NA = 0
 YES = 1
 
-TOTAL_SAMPLE_SIZE = 80
-SAMPLE_PER_QUESTION_TYPE = (int)(80 / 5)
+TOTAL_SAMPLE_SIZE = 100
+SAMPLE_PER_QUESTION_TYPE = (int)(TOTAL_SAMPLE_SIZE / 5)
 
 # define fields
 fields = ["sentence", "time", "location", "question_type", "temp_comp_flag"]
@@ -101,7 +101,7 @@ general_rain_sentences = [
 ]
 
 def generate_rain_sample(sentences: list):
-    for i in range(SAMPLE_PER_QUESTION_TYPE):
+    for i in range(SAMPLE_PER_QUESTION_TYPE+3):
         location = random.choice(locations)
         time = random.choice(times)
         append_sentences(sentences, general_rain_sentences, location, time, RAIN, NA)
@@ -116,7 +116,7 @@ general_snow_sentences = [
 ]
 
 def generate_snow_sample(sentences: list):
-    for i in range(SAMPLE_PER_QUESTION_TYPE):
+    for i in range(SAMPLE_PER_QUESTION_TYPE+3):
         location = random.choice(locations)
         time = random.choice(times)
         append_sentences(sentences, general_snow_sentences, location, time, SNOW, NA)
@@ -131,7 +131,7 @@ general_tempcomp_sentences = [
 ]
 
 def generate_temp_comp_sample(sentences: list):
-    for i in range(SAMPLE_PER_QUESTION_TYPE):
+    for i in range(SAMPLE_PER_QUESTION_TYPE+3):
         location = random.choice(locations)
         time = random.choice(times)
         append_sentences(sentences, general_tempcomp_sentences, location, time, TEMP_COMP, YES)
