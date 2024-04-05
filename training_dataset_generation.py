@@ -1,4 +1,5 @@
 import csv
+import enum
 import random
 
 # question type
@@ -10,16 +11,14 @@ WEATHER_DATA = 3
 WAKE_UP = 4
 
 # TempComp
-NA = -1
-COLD = 0
-HOT = 1
+NA = 0
+YES = 1
 
 TOTAL_SAMPLE_SIZE = 80
 SAMPLE_PER_QUESTION_TYPE = (int)(80 / 5)
 
 # define fields
 fields = ["sentence", "time", "location", "question_type", "temp_comp_flag"]
-
 
 locations = [
     "N/A",
@@ -30,9 +29,19 @@ locations = [
     "Los Angeles",
     "Chicago",
     "Miami",
+    "Tokyo",
+    "Sydney",
+    "Berlin",
+    "Toronto",
+    "Hong Kong",
+    "Dubai",
+    "Moscow",
+    "Rome",
+    "Madrid",
+    "Seoul"
 ]
-times = ["N/A", "now", "tomorrow", "next hour", "next week", "April 1st"]
 
+times = ["N/A", "now", "tomorrow", "next hour", "next week", "April 1st"]
 
 def append_sentences(
     sentences: list, sentence_set: list, location, time, question_type, temp_comp_flag
@@ -59,16 +68,30 @@ def append_sentences(
         }
     )
 
-
 # generate UNKWON sentence type
 random_sentences = [
     "how are you",
     "what time is it",
     "do you prefer mac or linux",
     "it is cold outside",
-    "it is raining"
+    "it is raining",
+    "it's so hot right now",
+    "do you like the weather today",
+    "it is warm outside"
 ]
 
+def generate_unknown_sample(sentences: list):
+    for _, sentence in enumerate(random_sentences):
+        sentences.append(
+            {
+                "sentence": sentence,
+                "time": "N/A",
+                "location": "N/A",
+                "question_type": UNKNOWN,
+                "temp_comp_flag": NA,
+            }
+        )
+        
 # generate RAIN sentence type
 general_rain_sentences = [
     "is it gonna rain {} {}",
@@ -76,9 +99,43 @@ general_rain_sentences = [
     "is rain expected {} {}",
     "Might it rain {} {}"
 ]
+
+def generate_rain_sample(sentences: list):
+    for i in range(SAMPLE_PER_QUESTION_TYPE):
+        location = random.choice(locations)
+        time = random.choice(times)
+        append_sentences(sentences, general_rain_sentences, location, time, RAIN, NA)
+
 # generate SNOW sentence type
+general_snow_sentences = [
+    "is it going to snow {} {}",
+    "will it snow {} {}",
+    "is snow expected {} {}",
+    "Might it snow {} {}",
+    "Do you think it will snow {} {}"
+]
+
+def generate_snow_sample(sentences: list):
+    for i in range(SAMPLE_PER_QUESTION_TYPE):
+        location = random.choice(locations)
+        time = random.choice(times)
+        append_sentences(sentences, general_snow_sentences, location, time, SNOW, NA)
+
 
 # generate TEMP_COMP sentence type
+general_tempcomp_sentences = [
+    "is it colder {} {}",
+    "is it hotter {} {}",
+    "will it be warmer {} {}",
+    "will it be cooler {} {}",
+]
+
+def generate_temp_comp_sample(sentences: list):
+    for i in range(SAMPLE_PER_QUESTION_TYPE):
+        location = random.choice(locations)
+        time = random.choice(times)
+        append_sentences(sentences, general_tempcomp_sentences, location, time, TEMP_COMP, YES)
+
 
 # generate WEATHER_DATA type
 general_weather_sentences = [
@@ -89,12 +146,11 @@ general_weather_sentences = [
     "Can you give me the weather conditions {} {}",
 ]
 
-
 def generate_weather_data_sample(sentences: list):
     for i in range(SAMPLE_PER_QUESTION_TYPE):
         location = random.choice(locations)
         time = random.choice(times)
-        append_sentences(sentences, general_weather_sentences, location, time, WEATHER_DATA, NA)
+        append_sentences(sentences, general_weather_sentences, location, time, WEATHER_DATA, NA)      
 
 # generate WAKE_UP type     
 wake_up_sentences = [
@@ -102,13 +158,30 @@ wake_up_sentences = [
     "Hi Simpson"
 ]
 
+def generate_wake_up_sample(sentences):
+    for _, sentence in enumerate(wake_up_sentences):
+        sentences.append(
+            {
+                "sentence": sentence,
+                "time": "N/A",
+                "location": "N/A",
+                "question_type": WAKE_UP,
+                "temp_comp_flag": NA,
+            }
+        )
+
 def main():
     sentence_ls = []
+    generate_unknown_sample(sentence_ls)
+    generate_rain_sample(sentence_ls)
+    generate_snow_sample(sentence_ls)
+    generate_temp_comp_sample(sentence_ls)
     generate_weather_data_sample(sentence_ls)
-    with open("training_dataset.csv", "w") as file:
-        writer = csv.DictWriter(file, fieldnames=fields)
+    generate_wake_up_sample(sentence_ls)
+    random.shuffle(sentence_ls)
+    with open("training_dataset.tsv", "w") as file:
+        writer = csv.DictWriter(file, fieldnames=fields, delimiter="\t")
         writer.writeheader()
         writer.writerows(sentence_ls)
-
 
 main()
