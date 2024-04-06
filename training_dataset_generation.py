@@ -12,9 +12,10 @@ WAKE_UP = 4
 
 # TempComp
 NA = 0
-YES = 1
+COLD = 1
+HOT = 2
 
-TOTAL_SAMPLE_SIZE = 80
+TOTAL_SAMPLE_SIZE = 200
 SAMPLE_PER_QUESTION_TYPE = (int)(TOTAL_SAMPLE_SIZE / 5)
 
 # define fields
@@ -123,18 +124,22 @@ def generate_snow_sample(sentences: list):
 
 
 # generate TEMP_COMP sentence type
-general_tempcomp_sentences = [
+general_tempcomp_cold_sentences = [
     "is it colder {} {}",
+    "will it be warmer {} {}",
+]
+
+general_tempcomp_hot_sentences = [
     "is it hotter {} {}",
     "will it be warmer {} {}",
-    "will it be cooler {} {}",
 ]
 
 def generate_temp_comp_sample(sentences: list):
-    for i in range(SAMPLE_PER_QUESTION_TYPE+3):
+    for i in range((int)((SAMPLE_PER_QUESTION_TYPE+3)/2)):
         location = random.choice(locations)
         time = random.choice(times)
-        append_sentences(sentences, general_tempcomp_sentences, location, time, TEMP_COMP, YES)
+        append_sentences(sentences, general_tempcomp_cold_sentences, location, time, TEMP_COMP, COLD)
+        append_sentences(sentences, general_tempcomp_hot_sentences, location, time, TEMP_COMP, HOT)
 
 
 # generate WEATHER_DATA type
