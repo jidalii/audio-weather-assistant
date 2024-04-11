@@ -19,7 +19,7 @@ TOTAL_SAMPLE_SIZE = 200
 SAMPLE_PER_QUESTION_TYPE = (int)(TOTAL_SAMPLE_SIZE / 5)
 
 # define fields
-fields = ["sentence", "time", "location", "question_type", "temp_comp_flag"]
+fields = ["sentence", "question_type", "time", "location",  "temp_comp_flag"]
 
 locations = [
     "N/A",
