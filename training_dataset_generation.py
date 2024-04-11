@@ -3,7 +3,7 @@ import enum
 import random
 
 # question type
-UNKNOWN = -1
+UNKNOWN = 5
 RAIN = 0
 SNOW = 1
 TEMP_COMP = 2
@@ -53,7 +53,7 @@ def append_sentences(
     elif location == "N/A":
         sentence = random.choice(sentence_set)
         sentence = sentence.format("", time)
-    elif location == "N/A":
+    elif time == "N/A":
         sentence = random.choice(sentence_set)
         sentence = sentence.format("in "+location, "")
     else:
