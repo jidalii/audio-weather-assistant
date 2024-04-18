@@ -39,6 +39,8 @@ class WeatherAssistant:
             self.wake_up()
         elif self.question_type == QuestionType.UNKNOWN:
             self.unknown_handler()
+        elif self.question_type == QuestionType.WEATHER_DATA:
+            self.weather_data_handler()
 
     def wake_up(self) -> None:
         if self.is_awake == True:
@@ -95,6 +97,8 @@ class WeatherAssistant:
                 self.location,
                 os.environ["TOMORROW_WEATHER_API_KEY"],
             )
+        if api_type == "forecast":
+            url += "&timesteps=1d"
         return url
 
     def weather_data_handler(self):
@@ -104,6 +108,105 @@ class WeatherAssistant:
         response = requests.get(url)
         if response.status_code == 200:
             weather_data = response.json()
-            print(weather_data)
+            weather_values = weather_data["data"]["values"]
+            # print(weather_values)
+            print(f"Current tempareture: {weather_values['temperature']}")
+            print(f"Weather condition: {weather_values['weatherCode']}")
+            print(f"Chance of raining: {weather_values['rainIntensity']}")
+            print(f"Chance of snowing: {weather_values['snowIntensity']}")
+            print(f"Windspeed: {weather_values['windSpeed']}")
+
         else:
             raise Exception("unable to fetch weather data")
+
+    def print_temp_comp_msg(self, data_cmp: dict, isHotter: bool):
+        weather_str = f"From {data_cmp['min']} to {data_cmp['max']}"
+        if self.temp_comp == TempComp.COLD:
+            if isHotter:
+                print(f"No, {self.time} not is colder. {weather_str}")
+            else:
+                print(f"Yes, {self.time} is colder. {weather_str}")
+        elif self.temp_comp == TempComp.HOT:
+            if isHotter:
+                print(f"Yes, {self.time} is hotter. {weather_str}")
+            else:
+                print(f"No, {self.time} not is hotter. {weather_str}")
+        else:
+            print("error: invalid temp_comp_flag")
+
+    def temp_cmp_handler(self):
+        api_type = self.acquire_api_type()
+        url = self.acquire_url(api_type)
+        response = requests.get(url)
+        if response.status_code == 200:
+            weather_data = response.json()
+            # print(weather_data)
+            weather_values = weather_data["timelines"]["daily"]
+            data_today_raw = weather_values[0]["values"]
+            data_today = {
+                "avg": data_today_raw["temperatureAvg"],
+                "min": data_today_raw["temperatureMax"],
+                "max": data_today_raw["temperatureMin"],
+            }
+            if self.time == "tomorrow":
+                data_cmp_raw = weather_values[1]["values"]
+                data_cmp = {
+                    "avg": data_cmp_raw["temperatureAvg"],
+                    "min": data_cmp_raw["temperatureMax"],
+                    "max": data_cmp_raw["temperatureMin"],
+                }
+            elif self.time == "next week":
+                data_cmp_raw = weather_values[7]["values"]
+                data_cmp = {
+                    "avg": data_cmp_raw["temperatureAvg"],
+                    "min": data_cmp_raw["temperatureMax"],
+                    "max": data_cmp_raw["temperatureMin"],
+                }
+            print(data_today)
+            print(data_cmp)
+
+            if data_today["avg"] > data_cmp["avg"]:
+                isHotter = True
+            else:
+                isHotter = False
+
+            self.print_temp_comp_msg(data_cmp, isHotter)
+
+    def is_snow_handler(self):
+        api_type = self.acquire_api_type()
+        url = self.acquire_url(api_type)
+        response = requests.get(url)
+        if response.status_code == 200:
+            weather_data = response.json()
+            weather_data = weather_data["timelines"]["daily"]
+            if self.time == "tomorrow":
+                data_cmp = weather_data[1]["values"]
+            elif self.time == "next week":
+                data_cmp = weather_data[7]["values"]
+            snow = data_cmp["snowIntensityAvg"]
+            if snow == 0:
+                print(f"No snow {self.time}.")
+            else:
+                print(
+                    f"There would be snow {self.time} with avg {snow} mm/hr"
+                )
+    
+    def is_rain_handler(self):
+        api_type = self.acquire_api_type()
+        url = self.acquire_url(api_type)
+        response = requests.get(url)
+        if response.status_code == 200:
+            weather_data = response.json()
+            weather_data = weather_data["timelines"]["daily"]
+            if self.time == "tomorrow":
+                data_cmp = weather_data[1]["values"]
+            elif self.time == "next week":
+                data_cmp = weather_data[7]["values"]
+            snow = data_cmp["rainIntensityAvg"]
+            if snow == 0:
+                print(f"No rain {self.time}.")
+            else:
+                print(
+                    f"There would be rain {self.time} with avg {snow} mm/hr"
+                )
+
