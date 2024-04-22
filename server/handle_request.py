@@ -150,20 +150,13 @@ class WeatherAssistant:
             }
             if self.time == "tomorrow":
                 data_cmp_raw = weather_values[1]["values"]
-                data_cmp = {
-                    "avg": data_cmp_raw["temperatureAvg"],
-                    "min": data_cmp_raw["temperatureMax"],
-                    "max": data_cmp_raw["temperatureMin"],
-                }
             elif self.time == "next week":
                 data_cmp_raw = weather_values[7]["values"]
-                data_cmp = {
-                    "avg": data_cmp_raw["temperatureAvg"],
-                    "min": data_cmp_raw["temperatureMax"],
-                    "max": data_cmp_raw["temperatureMin"],
-                }
-            print(data_today)
-            print(data_cmp)
+            data_cmp = {
+                "avg": data_cmp_raw["temperatureAvg"],
+                "min": data_cmp_raw["temperatureMax"],
+                "max": data_cmp_raw["temperatureMin"],
+            }
 
             if data_today["avg"] > data_cmp["avg"]:
                 isHotter = True
@@ -209,4 +202,3 @@ class WeatherAssistant:
                 print(
                     f"There would be rain {self.time} with avg {snow} mm/hr"
                 )
-
