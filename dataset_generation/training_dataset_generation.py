@@ -39,21 +39,10 @@ locations = [
     "Moscow",
     "Rome",
     "Madrid",
-    "Seoul",
-    "Shanghai",
-    "Singapore",
-    "San Francisco",
-    "Mexico City",
-    "Cape Town",
-    "Seattle",
-    "Houston",
-    "Denver",
-    "Philadelphia",
-    "Las Vegas",
-    "Atlanta"
+    "Seoul"
 ]
 
-times = ["N/A", "now", "tomorrow", "next hour", "next week", "April 1st", "next month", "next Wednesday", "two weeks from now"]
+times = ["N/A", "now", "tomorrow", "next hour", "next week", "April 1st"]
 
 def append_sentences(
     sentences: list, sentence_set: list, location, time, question_type, temp_comp_flag
@@ -89,10 +78,7 @@ random_sentences = [
     "it is raining",
     "it's so hot right now",
     "do you like the weather today",
-    "it is warm outside",
-    "did you watch the new marvel movie, it is so good",
-    "the weather forecast says it will rain tomorrow, so remember to bring your umbrella",
-    "it looks cloudy outside, I think it will rain soon"
+    "it is warm outside"
 ]
 
 def generate_unknown_sample(sentences: list):
@@ -112,9 +98,7 @@ general_rain_sentences = [
     "is it gonna rain {} {}",
     "will it rain {} {}",
     "is rain expected {} {}",
-    "Might it rain {} {}",
-    "Is there a possibility of rain {} {}",
-    "Are there any predictions for rain {} {}"
+    "Might it rain {} {}"
 ]
 
 def generate_rain_sample(sentences: list):
@@ -129,9 +113,7 @@ general_snow_sentences = [
     "will it snow {} {}",
     "is snow expected {} {}",
     "Might it snow {} {}",
-    "Do you think it will snow {} {}",
-    "Is there a chance for snow {} {}",
-    "Should we expect snow {} {}"
+    "Do you think it will snow {} {}"
 ]
 
 def generate_snow_sample(sentences: list):
@@ -144,16 +126,12 @@ def generate_snow_sample(sentences: list):
 # generate TEMP_COMP sentence type
 general_tempcomp_cold_sentences = [
     "is it colder {} {}",
-    "will it be chiller {} {}",
-     "is it expected to be cooler {} {}",
-    "Are we anticipating lower temperatures {} {}"
+    "will it be warmer {} {}",
 ]
 
 general_tempcomp_hot_sentences = [
     "is it hotter {} {}",
     "will it be warmer {} {}",
-    "will temperatures rise {} {}",
-    "Can we expect higher temperatures {} {}"
 ]
 
 def generate_temp_comp_sample(sentences: list):
@@ -171,8 +149,6 @@ general_weather_sentences = [
     "What's the weather like {} {}",
     "How's the climate {} {}",
     "Can you give me the weather conditions {} {}",
-    "Describe the upcoming weather {} {}",
-    "Could you update me the weather {} {}"
 ]
 
 def generate_weather_data_sample(sentences: list):
