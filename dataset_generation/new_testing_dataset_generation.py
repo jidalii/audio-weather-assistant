@@ -53,7 +53,7 @@ locations = [
     "Atlanta"
 ]
 
-times = ["N/A", "now", "tomorrow", "next hour", "next week", "April 1st", "next month", "next Wednesday", "two weeks from now"]
+times = ["N/A", "now", "tomorrow", "next hour", "next week", "April first", "next month", "next Wednesday", "two weeks from now"]
 
 def append_sentences(
     sentences: list, sentence_set: list, location, time, question_type, temp_comp_flag
