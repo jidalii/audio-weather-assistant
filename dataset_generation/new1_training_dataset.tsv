@@ -1,0 +1,182 @@
+sentence	question_type	time	location	temp_comp_flag
+Hey Simpson	4	N/A	N/A	0
+will it be chiller in London now	2	now	London	1
+what time is it	5	N/A	N/A	0
+Can you give me the weather conditions in Sydney April first	3	April first	Sydney	0
+how is the weather in Dubai next week	3	next week	Dubai	0
+Might it rain in Seoul tomorrow	0	tomorrow	Seoul	0
+is it hotter in Denver next hour	2	next hour	Denver	2
+is it going to snow in Seattle tomorrow	1	tomorrow	Seattle	0
+is it gonna rain in Tokyo April first	0	April first	Tokyo	0
+is it colder in Houston next hour	2	next hour	Houston	1
+Might it rain in Denver tomorrow	0	tomorrow	Denver	0
+Should we expect snow in Sydney now	1	now	Sydney	0
+Can you give me the weather conditions in Boston next week	3	next week	Boston	0
+is it gonna rain in Madrid 	0	N/A	Madrid	0
+will temperatures rise in Denver next week	2	next week	Denver	2
+is it going to snow in Boston next month	1	next month	Boston	0
+tell me about the weather in Philadelphia next month	3	next month	Philadelphia	0
+will it be chiller in Los Angeles 	2	N/A	Los Angeles	1
+do you like the weather today	5	N/A	N/A	0
+Describe the upcoming weather in Singapore two weeks from now	3	two weeks from now	Singapore	0
+"the weather forecast says it will rain tomorrow, so remember to bring your umbrella"	5	N/A	N/A	0
+is it going to snow in Moscow next hour	1	next hour	Moscow	0
+is it going to snow in Dubai next Wednesday	1	next Wednesday	Dubai	0
+is it hotter in Shanghai next month	2	next month	Shanghai	2
+How's the climate in London now	3	now	London	0
+Are we anticipating lower temperatures in Denver next week	2	next week	Denver	1
+Is there a possibility of rain in Berlin next Wednesday	0	next Wednesday	Berlin	0
+Might it rain in Miami two weeks from now	0	two weeks from now	Miami	0
+Might it rain in Tokyo next Wednesday	0	next Wednesday	Tokyo	0
+Are we anticipating lower temperatures in Moscow 	2	N/A	Moscow	1
+What's the weather like in Atlanta next month	3	next month	Atlanta	0
+Describe the upcoming weather in New York tomorrow	3	tomorrow	New York	0
+Could you update me the weather in San Francisco next month	3	next month	San Francisco	0
+is it expected to be cooler in Las Vegas tomorrow	2	tomorrow	Las Vegas	1
+Could you update me the weather in New York April first	3	April first	New York	0
+is rain expected in Hong Kong next Wednesday	0	next Wednesday	Hong Kong	0
+Is there a possibility of rain in Hong Kong 	0	N/A	Hong Kong	0
+will it snow in London next hour	1	next hour	London	0
+is rain expected  next hour	0	next hour	N/A	0
+do you prefer mac or linux	5	N/A	N/A	0
+"did you watch the new marvel movie, it is so good"	5	N/A	N/A	0
+is snow expected in Los Angeles tomorrow	1	tomorrow	Los Angeles	0
+will it rain in Singapore now	0	now	Singapore	0
+Do you think it will snow in Atlanta next month	1	next month	Atlanta	0
+Could you update me the weather in Las Vegas tomorrow	3	tomorrow	Las Vegas	0
+tell me about the weather in Seattle next week	3	next week	Seattle	0
+Should we expect snow in San Francisco next hour	1	next hour	San Francisco	0
+Is there a possibility of rain in Las Vegas 	0	N/A	Las Vegas	0
+Describe the upcoming weather in Atlanta two weeks from now	3	two weeks from now	Atlanta	0
+Could you update me the weather in New York April first	3	April first	New York	0
+Should we expect snow in Paris 	1	N/A	Paris	0
+is it hotter in Toronto now	2	now	Toronto	2
+will temperatures rise in Atlanta tomorrow	2	tomorrow	Atlanta	2
+How's the climate in Berlin next Wednesday	3	next Wednesday	Berlin	0
+Describe the upcoming weather in Boston 	3	N/A	Boston	0
+is it expected to be cooler in Denver next hour	2	next hour	Denver	1
+What's the weather like in Seattle tomorrow	3	tomorrow	Seattle	0
+Can we expect higher temperatures in London next Wednesday	2	next Wednesday	London	2
+is it gonna rain in Tokyo April first	0	April first	Tokyo	0
+is it hotter in Shanghai tomorrow	2	tomorrow	Shanghai	2
+What's the weather like in Denver April first	3	April first	Denver	0
+will it snow in Rome now	1	now	Rome	0
+will it snow in San Francisco April first	1	April first	San Francisco	0
+will it be chiller in Atlanta tomorrow	2	tomorrow	Atlanta	1
+How's the climate in Houston next hour	3	next hour	Houston	0
+Are there any predictions for rain in Chicago two weeks from now	0	two weeks from now	Chicago	0
+Can you give me the weather conditions in Mexico City two weeks from now	3	two weeks from now	Mexico City	0
+is it colder in Boston next Wednesday	2	next Wednesday	Boston	1
+will temperatures rise in Las Vegas tomorrow	2	tomorrow	Las Vegas	2
+Hi Simpson	4	N/A	N/A	0
+Are there any predictions for rain in Atlanta April first	0	April first	Atlanta	0
+Are there any predictions for rain in Sydney next month	0	next month	Sydney	0
+Might it rain in Moscow April first	0	April first	Moscow	0
+is rain expected in Seoul two weeks from now	0	two weeks from now	Seoul	0
+How's the climate in Berlin next week	3	next week	Berlin	0
+how is the weather in Miami next week	3	next week	Miami	0
+is it colder in Toronto next week	2	next week	Toronto	1
+is it gonna rain in Sydney next hour	0	next hour	Sydney	0
+it is raining	5	N/A	N/A	0
+how is the weather in Miami tomorrow	3	tomorrow	Miami	0
+it is cold outside	5	N/A	N/A	0
+Are we anticipating lower temperatures in Toronto now	2	now	Toronto	1
+Could you update me the weather in Los Angeles 	3	N/A	Los Angeles	0
+Should we expect snow in Houston two weeks from now	1	two weeks from now	Houston	0
+is it gonna rain in New York next hour	0	next hour	New York	0
+will it rain in Las Vegas next month	0	next month	Las Vegas	0
+it is warm outside	5	N/A	N/A	0
+tell me about the weather in Boston two weeks from now	3	two weeks from now	Boston	0
+how is the weather  next week	3	next week	N/A	0
+will it be warmer in Sydney next month	2	next month	Sydney	2
+will it be warmer in Dubai next Wednesday	2	next Wednesday	Dubai	2
+will it be warmer  next hour	2	next hour	N/A	2
+it's so hot right now	5	N/A	N/A	0
+is it going to snow in Mexico City now	1	now	Mexico City	0
+tell me about the weather in Miami tomorrow	3	tomorrow	Miami	0
+will it snow in Rome tomorrow	1	tomorrow	Rome	0
+Could you update me the weather in Madrid April first	3	April first	Madrid	0
+Is there a chance for snow in Tokyo next hour	1	next hour	Tokyo	0
+Is there a possibility of rain in Los Angeles tomorrow	0	tomorrow	Los Angeles	0
+is it colder  next hour	2	next hour	N/A	1
+What's the weather like in Shanghai next Wednesday	3	next Wednesday	Shanghai	0
+is it going to snow in Mexico City next hour	1	next hour	Mexico City	0
+Can we expect higher temperatures in London now	2	now	London	2
+is it expected to be cooler in Sydney next month	2	next month	Sydney	1
+How's the climate  next Wednesday	3	next Wednesday	N/A	0
+will it be warmer in Moscow 	2	N/A	Moscow	2
+Are there any predictions for rain in Sydney next hour	0	next hour	Sydney	0
+will it snow in New York next month	1	next month	New York	0
+is it going to snow in New York next month	1	next month	New York	0
+is it going to snow in Cape Town 	1	N/A	Cape Town	0
+is it expected to be cooler in Tokyo now	2	now	Tokyo	1
+is snow expected in Sydney 	1	N/A	Sydney	0
+is it expected to be cooler in Dubai next Wednesday	2	next Wednesday	Dubai	1
+Should we expect snow in Seattle next Wednesday	1	next Wednesday	Seattle	0
+Can you give me the weather conditions in Rome April first	3	April first	Rome	0
+Can you give me the weather conditions in New York 	3	N/A	New York	0
+Is there a possibility of rain in Denver next hour	0	next hour	Denver	0
+Should we expect snow in Moscow 	1	N/A	Moscow	0
+will it snow in San Francisco next Wednesday	1	next Wednesday	San Francisco	0
+will temperatures rise in Toronto next week	2	next week	Toronto	2
+is it expected to be cooler in London next Wednesday	2	next Wednesday	London	1
+Is there a possibility of rain in Sydney two weeks from now	0	two weeks from now	Sydney	0
+will it be warmer in Houston next hour	2	next hour	Houston	2
+Are we anticipating lower temperatures in Mexico City next Wednesday	2	next Wednesday	Mexico City	1
+tell me about the weather in Moscow next hour	3	next hour	Moscow	0
+will it rain in Los Angeles next hour	0	next hour	Los Angeles	0
+is snow expected in Hong Kong now	1	now	Hong Kong	0
+Is there a chance for snow in Seattle two weeks from now	1	two weeks from now	Seattle	0
+Is there a chance for snow in London now	1	now	London	0
+How's the climate in Sydney now	3	now	Sydney	0
+is it colder in Shanghai next week	2	next week	Shanghai	1
+"it looks cloudy outside, I think it will rain soon"	5	N/A	N/A	0
+is it going to snow in Mexico City next hour	1	next hour	Mexico City	0
+is it hotter in Mexico City next Wednesday	2	next Wednesday	Mexico City	2
+Should we expect snow in Singapore tomorrow	1	tomorrow	Singapore	0
+Is there a chance for snow in Hong Kong next hour	1	next hour	Hong Kong	0
+is it hotter in Tokyo now	2	now	Tokyo	2
+is it going to snow in Hong Kong 	1	N/A	Hong Kong	0
+Might it rain in London two weeks from now	0	two weeks from now	London	0
+How's the climate in Tokyo April first	3	April first	Tokyo	0
+will temperatures rise in Boston next Wednesday	2	next Wednesday	Boston	2
+how is the weather in Rome next hour	3	next hour	Rome	0
+will it be warmer in Shanghai next week	2	next week	Shanghai	2
+is it gonna rain  two weeks from now	0	two weeks from now	N/A	0
+will it be chiller in Las Vegas tomorrow	2	tomorrow	Las Vegas	1
+will it be chiller in Shanghai tomorrow	2	tomorrow	Shanghai	1
+Do you think it will snow in London April first	1	April first	London	0
+is snow expected in Dubai next month	1	next month	Dubai	0
+will it snow in Dubai next hour	1	next hour	Dubai	0
+is it gonna rain in Los Angeles next Wednesday	0	next Wednesday	Los Angeles	0
+Might it rain in Rome now	0	now	Rome	0
+is it gonna rain in Seattle April first	0	April first	Seattle	0
+Can we expect higher temperatures in Las Vegas tomorrow	2	tomorrow	Las Vegas	2
+how are you	5	N/A	N/A	0
+will it snow in Seattle next Wednesday	1	next Wednesday	Seattle	0
+Is there a possibility of rain in Tokyo 	0	N/A	Tokyo	0
+is rain expected in Denver next Wednesday	0	next Wednesday	Denver	0
+is it gonna rain in Paris next Wednesday	0	next Wednesday	Paris	0
+Might it snow in Singapore two weeks from now	1	two weeks from now	Singapore	0
+will it rain in Chicago next week	0	next week	Chicago	0
+Should we expect snow in Los Angeles April first	1	April first	Los Angeles	0
+Is there a chance for snow in Shanghai next hour	1	next hour	Shanghai	0
+Is there a possibility of rain in San Francisco April first	0	April first	San Francisco	0
+is it colder in Shanghai next month	2	next month	Shanghai	1
+What's the weather like in Houston next week	3	next week	Houston	0
+Should we expect snow in Seattle 	1	N/A	Seattle	0
+is it going to snow in Cape Town next Wednesday	1	next Wednesday	Cape Town	0
+Do you think it will snow in Singapore now	1	now	Singapore	0
+is snow expected in Sydney April first	1	April first	Sydney	0
+will it be warmer in Los Angeles 	2	N/A	Los Angeles	2
+Is there a possibility of rain in Seoul next Wednesday	0	next Wednesday	Seoul	0
+Could you update me the weather  two weeks from now	3	two weeks from now	N/A	0
+Is there a possibility of rain in Seattle next Wednesday	0	next Wednesday	Seattle	0
+tell me about the weather in Rome two weeks from now	3	two weeks from now	Rome	0
+Might it rain in Houston now	0	now	Houston	0
+Might it rain in Dubai next month	0	next month	Dubai	0
+What's the weather like in Moscow April first	3	April first	Moscow	0
+is rain expected in Philadelphia tomorrow	0	tomorrow	Philadelphia	0
+Should we expect snow in Las Vegas next week	1	next week	Las Vegas	0
+Are there any predictions for rain in Miami April first	0	April first	Miami	0
+will it rain in Chicago tomorrow	0	tomorrow	Chicago	0
